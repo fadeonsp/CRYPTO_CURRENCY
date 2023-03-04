@@ -10,17 +10,21 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 import { CoinListComponent } from './coin-list/coin-list.component';
+import { CoinDetailComponent } from './coin-detail/coin-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CoinListComponent
+    CoinListComponent,
+    CoinDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     MatToolbarModule,
     MatSelectModule,
     MatFormFieldModule,
