@@ -1,4 +1,4 @@
-//import { CurrencyService } from './../service/currency.service';
+import { CurrencyService } from './../service/currency.service';
 import { ApiService } from './../service/api.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -46,7 +46,10 @@ export class CoinDetailComponent implements OnInit {
   @ViewChild(BaseChartDirective) myLineChart !: BaseChartDirective;
 
 
-  constructor(private api : ApiService, private activatedRoute : ActivatedRoute, private currencyService : CurrencyService) { }
+  constructor(
+    private api : ApiService,
+    private activatedRoute : ActivatedRoute,
+    private currencyService : CurrencyService) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(val=>{
